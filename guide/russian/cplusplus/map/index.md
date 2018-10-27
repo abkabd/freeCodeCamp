@@ -18,31 +18,33 @@ localeTitle: карта
 
 ```c++
 #include <iostream> 
- #include <map> 
- 
- using namespace std; 
- 
- int main (){ 
-  map<char,int> first; 
- 
-  //initializing 
-  first['a']=10; 
-  first['b']=20; 
-  first['c']=30; 
-  first['d']=40; 
- 
+#include <map> 
+
+using namespace std; 
+
+int main ()
+{ 
+   map<char,int> first; 
+
+   //initializing 
+   first['a']=10; 
+   first['b']=20; 
+   first['c']=30; 
+   first['d']=40; 
+
    map<char, int>::iterator it; 
-   for(it=first.begin(); it!=first.end(); ++it){ 
+   for(it=first.begin(); it!=first.end(); ++it)
+   { 
       cout << it->first << " => " << it->second << '\n'; 
    } 
- 
-  return 0; 
- } 
+
+   return 0; 
+} 
 ```
 
 Вывод:
 ```
-a => 10 
+ a => 10 
  b => 20 
  c => 30 
  d => 40 
@@ -57,7 +59,7 @@ a => 10
 Вставка данных с функцией вставки.
 
 ```c++
-myMap.insert(make_pair("earth", 1)); 
+ myMap.insert(make_pair("earth", 1)); 
  myMap.insert(make_pair("moon", 2)); 
 ```
 
@@ -70,12 +72,12 @@ myMap.insert(make_pair("earth", 1));
 Чтобы получить доступ к элементам карты, вам необходимо создать для нее итератор. Вот пример, как было сказано ранее.
 
 ```c++
-map<char, int>::iterator it; 
- for(it=first.begin(); it!=first.end(); ++it){ 
-  cout << it->first << " => " << it->second << '\n'; 
+ map<char, int>::iterator it; 
+ for(it=first.begin(); it!=first.end(); ++it) { 
+   cout << it->first << " => " << it->second << '\n'; 
  } 
 ```
 
-Здесь вы можете узнать больше о карте: [cpluspluc\_map](http://www.cplusplus.com/reference/map/map/map/)
+Здесь вы можете узнать больше о карте: [cplusplus\_map](http://www.cplusplus.com/reference/map/map/map/)
 
 NB: весь код в примере приведен в версии C ++ 11. Вы можете узнать больше о версии C ++ [здесь](http://en.cppreference.com/w/cpp/compiler_support)
